@@ -51,13 +51,13 @@ jobs:
           API_VERSION=$(jq '.info.version' swagger.json | tr -d '"')
           echo "::set-output name=api-name::${API_NAME}"
           echo "::set-output name=api-version::${API_VERSION}"
-      - uses: jiridj/wm-apigw-actions-promote-api@v1 
+      - uses: jiridj/wm-apigw-actions-promote-api@v1.2.0
         with: 
           apigw-url: ${{ secrets.APIGW_URL }}
           apigw-username: ${{ secrets.APIGW_USERNAME }}
           apigw-password: ${{ secrets.APIGW_PASSWORD }}
           api-name: Swagger Petstore
-          api-version: 1.0.25
+          api-version: 1.0.26
           stage-name: staging
         #  debug: ${{ secrets.ACTIONS_STEP_DEBUG }} 
 
