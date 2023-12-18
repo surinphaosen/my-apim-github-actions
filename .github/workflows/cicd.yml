@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: jiridj/wm-apigw-actions-register-api@v1
         with: 
-          apigw-url: ${{ secrets.APIGW_URL }}
+          apigw-url: ${{ secrets.APIGW_URL_DEV }}
           apigw-username: ${{ secrets.APIGW_USERNAME }}
           apigw-password: ${{ secrets.APIGW_PASSWORD }}
           api-spec: swagger.json
