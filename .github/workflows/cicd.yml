@@ -49,8 +49,8 @@ jobs:
         run: |
           API_NAME=$(jq '.info.title' swagger.json | tr -d '"')
           API_VERSION=$(jq '.info.version' swagger.json | tr -d '"')
-          echo "::set-output name=api-name::${API_NAME}"
-          echo "::set-output name=api-version::${API_VERSION}"
+          echo "{api-name}={${API_NAME}}"
+          echo "{api-version}={${API_VERSION})"
       - uses: jiridj/wm-apigw-actions-promote-api@v1
         with: 
           apigw-url: ${{ secrets.APIGW_URL }}
