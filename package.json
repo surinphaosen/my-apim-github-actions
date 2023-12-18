@@ -1,5 +1,5 @@
 {
-  "name": "wmtc-blog-apim-github-actions",
+  "name": "my-apim-github-actions",
   "version": "0.1.8",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jiridj/wmtc-blog-apim-github-actions.git"
+    "url": "git+https://github.com/surinphaosen/my-apim-github-actions.git"
   },
   "keywords": [],
-  "author": "Jiri De Jagere <jiridj@gmail.com> (https://jiridj.be/)",
+  "author": "Surin P. <dream.sek@gmail.com> ()",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jiridj/wmtc-blog-apim-github-actions/issues"
+    "url": "https://github.com/surinphaosen/my-apim-github-actions/issues"
   },
-  "homepage": "https://github.com/jiridj/wmtc-blog-apim-github-actions#readme",
+  "homepage": "https://github.com/surinphaosen/my-apim-github-actions#readme",
   "devDependencies": {
     "cross-var": "^1.1.0"
   }
