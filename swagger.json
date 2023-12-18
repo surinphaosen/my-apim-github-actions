@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "description": "CI/CD",
-    "version": "0.1.12",
+    "version": "0.1.13",
     "title": "Swagger Petstore",
     "termsOfService": "http://swagger.io/terms/",
     "contact": {
