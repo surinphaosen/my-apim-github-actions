@@ -42,7 +42,7 @@ jobs:
     if: contains(github.ref, 'refs/tags/')
     environment: staging
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - id: api-info
         # get the api name and version from the swagger spec
         # we need to set these as variables to use them as input in the next step
