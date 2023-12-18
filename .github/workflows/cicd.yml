@@ -51,13 +51,15 @@ jobs:
           API_VERSION=$(jq '.info.version' swagger.json | tr -d '"')
           echo "{api-name}={${API_NAME}}"
           echo "{api-version}={${API_VERSION}}"
+          echo "::set-output name=api-name::${API_NAME}"
+          echo "::set-output name=api-version::${API_VERSION}"
       - uses: jiridj/wm-apigw-actions-promote-api@v1
         with: 
           apigw-url: ${{ secrets.APIGW_URL }}
           apigw-username: ${{ secrets.APIGW_USERNAME }}
           apigw-password: ${{ secrets.APIGW_PASSWORD }}
-          api-name: ${{ steps.api-info.api-name }}
-          api-version: ${{ steps.api-info.api-version }}
+          api-name: ${{ steps.api-info.outputs.api-name }}
+          api-version: ${{ steps.api-info.outputs.api-version }}
           stage-name: staging
           debug: ${{ secrets.ACTIONS_STEP_DEBUG }} 
 
