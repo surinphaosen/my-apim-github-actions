@@ -57,7 +57,7 @@ jobs:
           apigw-username: ${{ secrets.APIGW_USERNAME }}
           apigw-password: ${{ secrets.APIGW_PASSWORD }}
           api-name: Swagger Petstore
-          api-version: 1.0.26
+          api-version: 1.0.27
           stage-name: staging
         #  debug: ${{ secrets.ACTIONS_STEP_DEBUG }} 
 
