@@ -20,7 +20,7 @@ jobs:
     environment: development
     steps:
       - uses: actions/checkout@v3
-      - uses: surinphaosen/wm-apigw-actions-register-api@v1
+      - uses: jiridj/wm-apigw-actions-register-api@v1
         with: 
           apigw-url: ${{ secrets.APIGW_URL }}
           apigw-username: ${{ secrets.APIGW_USERNAME }}
@@ -28,6 +28,13 @@ jobs:
           api-spec: swagger.json
           set-active: true
           debug: ${{ secrets.ACTIONS_STEP_DEBUG }}
+      - name: print-api-info
+        run: |
+          echo "ID      = ${{ steps.register-api.outputs.api-id }}"
+          echo "Name    = ${{ steps.register-api.outputs.api-name }}"
+          echo "Version = ${{ steps.register-api.outputs.api-version }}"
+          echo "Type    = ${{ steps.register-api.outputs.api-type }}"
+          echo "Active  = ${{ steps.register-api.outputs.api-is-active }}"
 
   promote-to-staging:
     runs-on: ubuntu-latest
@@ -56,7 +63,7 @@ jobs:
 
   promote-to-prod:
     runs-on: ubuntu-latest
-    needs: [ promote-to-staging ]
+    #needs: [ promote-to-staging ]
     # only run for tags
     if: contains(github.ref, 'refs/tags/')
     environment: production
