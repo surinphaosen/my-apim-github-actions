@@ -42,7 +42,7 @@ jobs:
           apigw-url: ${{ secrets.APIGW_URL }}
           apigw-username: ${{ secrets.APIGW_USERNAME }}
           apigw-password: ${{ secrets.APIGW_PASSWORD }}
-          api-spec: testapi.json
+          api-spec: http://testapi.mylearn.shop/swagger/v1/swagger.json
           set-active: true
           debug: ${{ secrets.ACTIONS_STEP_DEBUG }}
 
